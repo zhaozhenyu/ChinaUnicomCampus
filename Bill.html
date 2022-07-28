@@ -4,6 +4,7 @@
 <title>中国联通2022</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
 <style>
 * {
   box-sizing: border-box;
@@ -12,7 +13,26 @@
 body {
   margin: 0;
   background-image:url('背景.jpg');
+  
+  font-family: Arial;
 
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+/* Hide the images by default */
+.mySlides {
+  display: table;
+  position: relative;
+
+  margin:5px;
+  text-align:center;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
 }
 
 /* 设置页眉的样式 */
@@ -48,6 +68,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 200%
+
 }
 
 /* 改变鼠标悬停时的颜色 */
@@ -58,9 +79,11 @@ body {
 
 /* 创建并排的三个非等列 */
 .column {
+
   float: left;
-  width: 50%;
-  padding: 15px;
+  width: 16.66%;
+  float: left;
+  padding: px;
 }
 
 /* 清除列之后的浮动 */
@@ -68,47 +91,196 @@ body {
   content: "";
   display: table;
   clear: both;
+  height: 10%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: center;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-shadow: 12px 23px 33px #000000;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: cernter;
+  text-align: center;
+  top: 0;
+
+  
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  /* padding: 1px; */
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
 
 /* 响应式布局 - 创建堆叠而非并排的三列 */
-@media screen and (max-width:1000px) {
+/* @media screen and (max-width:1000px) {
   .column {
     width: 100%;
   }
-}
+} */
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>中国联通2022校园卡海报页面</h1>
+  <h1>中国联通2022校园卡海报链接底部有缩略图</h1>
   <p></p>
 </div>
-
 <div class="topnav">
-  <a href="#">名片链接</a>
-  <a href="Bill.html">海报链接</a>
-  <a href="#">业务流程</a>
-  <a href="#">下单流程</a>
-  <a href="#">代理二维码</a>
+  <a href="index.html"  class="front_shawdow">名片链接</a>
+  <a href="Bill.html"       class="front_shawdow">海报链接</a>
+  <a href="business_process.html"       class="front_shawdow">业务流程</a>
+  <a href="post_information.html"       class="front_shawdow">物流时间以及二维码</a>
+
 </div>
 
-<div class="row">
-  <div class="column">
-    <h2  class="front_shawdow">名片</h2>
-     <img src="名片.jpg" width="100%" height="100%">
+
+<a class="prev" onclick="plusSlides(-1)">  点击切海报  底部有缩略图 底部有缩略图 ❮</a>
+<a class="next" onclick="plusSlides(1)">❯点击切海报    底部有缩略图 底部有缩略图</a>
+
+
+<div class="container">
+  <div class="mySlides">
+ 
+    <img src="1.jpg" width="30%" height="55%" >
+
   </div>
-  
-  <div class="column">
-    <h2 class="front_shawdow">企业微信</h2>
-     <img src="企业微信.jpg" width="55%" height="100%">
+
+  <div class="mySlides">
+
+    <img src="2.jpg" width="30%" height="35%" >
   </div>
-  
-<!--   <div class="column">
-    <h2>Column</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-  </div> -->
+
+  <div class="mySlides">
+
+    <img src="3.jpg" width="30%" height="35%" >
+  </div>
+    
+  <div class="mySlides">
+
+    <img src="4.jpg" width="30%" height="35%" >
+  </div>
+
+  <div class="mySlides">
+
+    <img src="5.jpg" width="30%" height="35%" >
+  </div>
+    
+  <div class="mySlides">
+    <img src="5.jpg" width="30%" height="35%" >
+  </div>
+    
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="1.jpg" width="100%" height="35%" onclick="currentSlide(1)" alt="宣传海报1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="2.jpg" width="100%" height="35%" onclick="currentSlide(2)" alt="宣传海报1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="3.jpg" style="width:100%"  height="35%" onclick="currentSlide(3)" alt="宣传海报3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="4.jpg" style="width:100%"  height="35%"  onclick="currentSlide(4)" alt="宣传海报4">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="5.jpg" style="width:100%" height="35%"  onclick="currentSlide(5)" alt="宣传海报5">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="6.jpg" style="width:100%" height="35%"  onclick="currentSlide(6)" alt="宣传海报6">
+    </div>
+  </div>
 </div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+ 
+
+
 
 </body>
 </html>
